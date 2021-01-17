@@ -1,0 +1,60 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  transition: background 1s ease;
+}
+
+html {
+  font-size: 62.5%;
+  max-width: 100%;
+
+  @include respond(tab-port) {
+    font-size: 46%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+
+body {
+  background: var(--background-color);
+  box-sizing: border-box;
+  height: 100vh;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: $color-persian-indigo;
+  color: $color-cultured;
+}
+
+img {
+  width: 46%;
+
+  @include respond(tab-land) {
+    width: 60%;
+  }
+}
+
+svg {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: 700;
+}
+
+main {
+  overflow: hidden;
+
+  @include respond(phone) {
+    overflow: scroll;
+  }
+}

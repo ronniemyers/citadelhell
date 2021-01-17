@@ -1,0 +1,121 @@
+.form-inline input {
+    vertical-align: middle;
+    padding: $small-padding;
+    background-color: $color-cultured;
+    border: none;
+    font-family: $montserrat;
+    width: 32rem;
+
+    @include respond(phone) {
+        visibility: hidden;
+    }
+}
+
+.form-inline button {
+    padding: $small-padding;
+    border: none;
+    background-color: transparent;
+    color: $color-han-purple;
+    font-family: $montserrat;
+    font-weight: 700;
+    cursor: pointer;
+    position: absolute;
+    margin-left: -10rem;
+    outline: none;
+
+    @include respond(tab-land) {
+        margin-top: .2rem;
+        padding: 1.4rem;
+    }
+
+    @include respond(tab-port) {
+        margin-top: .5rem;
+        padding: 1rem;
+        margin-left: -10rem;
+    }
+
+    @include respond(phone) {
+        visibility: hidden;
+    }
+
+    &:active {
+        color: $color-orange-peel;
+    }
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+#form-confirmation {
+    visibility: hidden;
+    margin-top: $xsmall-margin;
+    margin-bottom: $small-margin;
+    color: $color-sheen-green;
+
+    & p {
+        font-size: $small-font-size;
+    }
+
+    @include respond(phone) {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+// mobile
+.form-inline-mobile input {
+    visibility: hidden;
+    display: none;
+
+    @include respond(phone) {
+        visibility: visible;
+        display: block;
+        vertical-align: middle;
+        padding: $small-padding;
+        background-color: $color-cultured;
+        border: none;
+        font-family: $montserrat;
+        width: 32rem;
+        border-radius: 0rem;
+    }
+}
+
+.form-inline-mobile button {
+    visibility: hidden;
+    display: none;
+
+    @include respond(phone) {
+        visibility: visible;
+        display: block;
+        padding: $small-padding;
+        border: none;
+        background-color: $color-persian-indigo;
+        color: $color-cultured;
+        font-family: $montserrat;
+        width: 32rem;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+#form-confirmation-mobile {
+    visibility: hidden;
+    display: none;
+
+    @include respond(phone) {
+        visibility: hidden;
+        display: block;
+        margin-top: $default-margin;
+        margin-bottom: $large-margin;
+        color: $color-persian-indigo;
+        background-color: $color-cultured;
+        padding: $xsmall-padding;
+        border-radius: 6rem;
+
+        & p {
+            font-size: $default-font-size;
+        }
+    }
+}

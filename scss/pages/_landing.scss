@@ -1,0 +1,149 @@
+.flex-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    text-align: right;
+
+    @include respond(phone) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.protaski-logo {
+    cursor: default;
+
+    @include respond(phone) {
+        margin-top: 20rem;
+    }
+}
+
+.description {
+    margin-top: $small-margin;
+    margin-bottom: $small-margin;
+
+    @include respond(phone) {
+        margin-left: $medium-margin;
+        margin-right: $medium-margin;
+    }
+
+    & h1 {
+        font-size: $default-font-size;
+        font-weight: 300;
+        margin: 0;
+
+        @include respond(phone) {
+            font-size: $medium-font-size;
+            line-height: $medium-line-height;
+        }
+    }
+}
+
+.subscribe p {
+    color: $color-cultured;
+    font-weight: 700;
+    font-size: $small-font-size;
+    margin-top: $default-margin;
+    margin-bottom: $xsmall-margin;
+
+    @include respond(phone) {
+        visibility: hidden;
+    }
+}
+
+.protaski-demo {
+    @include respond(phone) {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+.protaski-mobile {
+    visibility: hidden;
+    display: none;
+
+    @include respond(phone) {
+        visibility: visible;
+        display: block;
+    }
+}
+
+.google-play {
+    @include respond(phone) {
+        visibility: hidden;
+    }
+}
+
+.contain {
+    @include center;
+}
+
+.flex-item-left img {
+    width: 26%;
+}
+
+.flex-item-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    margin-left: $large-margin;
+
+    @include respond(tab-land) {
+        margin-left: $large-margin;
+        width: 60%;
+    }
+
+    @include respond(tab-port) {
+        margin-left: $large-margin;
+        width: 80%;
+    }
+
+    @include respond(phone) {
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+    }
+
+    & img:nth-child(2) {
+        @include respond(phone) {
+            width: 90%;
+        }
+    }
+
+    & img:last-child {
+        @include respond(phone) {
+            width: 70%;
+        }
+    }
+}
+
+// mobile
+.google-play-mobile {
+    visibility: hidden;
+    display: none;
+
+    @include respond(phone) {
+        visibility: visible;
+        display: block;
+        margin: auto;
+        margin-top: $medium-margin;
+    }
+}
+
+.subscribe-mobile {
+    visibility: hidden;
+    display: none;
+
+    @include respond(phone) {
+        visibility: visible;
+        display: block;
+        margin-top: $medium-margin;
+        color: $color-cultured;
+    }
+
+    & p {
+        font-weight: 700;
+        font-size: $default-font-size;
+    }
+}

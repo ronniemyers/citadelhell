@@ -1,0 +1,51 @@
+body {
+    font-family: $montserrat;
+    line-height: $default-line-height;
+    color: var(--color-text);
+}
+
+h1,
+h2,
+h3 {
+    margin: $medium-margin 0;
+    font-size: $medium-font-size;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+
+    &:hover {
+        color: $color-orange-peel;
+    }
+}
+
+p {
+    font-size: $default-font-size;
+    font-weight: 300;
+
+    @include respond(phone) {
+        font-size: $medium-font-size;
+        line-height: $medium-line-height;
+    }
+}
+
+section {
+    margin-right: $large-margin;
+    margin-left: $large-margin;
+    margin-bottom: $large-margin;
+
+    @include respond(phone) {
+        margin-left: $medium-margin;
+        margin-right: $medium-margin;
+
+    }
+
+    & p {
+        font-size: $default-font-size;
+    }
+}
+
+li {
+    font-size: $small-font-size;
+}
